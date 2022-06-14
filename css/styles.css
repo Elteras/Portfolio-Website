@@ -52,7 +52,7 @@
 
 
 body {
-    background-color: ;
+    background-color: none;
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 16px;
@@ -76,7 +76,7 @@ h3 {
   }
   
 footer {
-      font-size: ;
+      font-size: 14px;
   }
   
 .page-footer {
@@ -113,7 +113,7 @@ button:focus,
 .button:hover,
 .button:focus {            /*iirc the button:focus is a thing for screen readers*/
     cursor: pointer;
-    opacity: 0.8;         
+    opacity: 0.8;     
 
 }
 
@@ -148,7 +148,7 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
 
 .profile {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 110px auto;
 }
 
 .profile__portrait {
@@ -168,7 +168,6 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: ;
 }
 
 .sun {
@@ -223,6 +222,8 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: flex-start;
+    flex: 1;
 }
 
 /*For work page*/
