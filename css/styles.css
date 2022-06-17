@@ -1,26 +1,31 @@
-/* Colors
-
-
-
-*/
-
-* {
-    box-sizing: border-box;
-}
-
+/* Colors */
 
 /*VARIABLES*/
 
 :root{
-    --primary-color: #357b70;
-    --secondary-color: #e0b354;
-    --tertiary-color: #2b2b2b;
-    --purple: #59109e;
-    --active-color: #6a9c1f;
+    --primary-color: #357b61;
+    --secondary-color: #492f62;
+    --tertiary-color: #2b2b2b;      
+    --active-color: #6a9c1f;         /*Think this is for the active links? Will need to change those */
+}
+
+* {
+    box-sizing: border-box;             /*This is a universal selector of some sort, which is why it's at the top*/
 }
 
 
+/*Navigation Bar*/
 
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/**/
 
 .page-header {
     display: flex;
@@ -28,7 +33,7 @@
     padding: 20px;
 }
 
-.page-header__logo {
+.page-header__logo {                /*This used to be the DV Garen pic but thats gone. */
     width: 10%;
 }
 
@@ -41,21 +46,12 @@
     text-align: right;
 }
 
-.navigation-list {
-    list-style-type: none;
-}
-
-.navigation-list li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
 
 body {
     background-color: none;
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
     margin-left: 20px
 }
@@ -66,8 +62,8 @@ h1 {
   }
   
 h2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 23px;
+    font-weight: 400;
   }
   
 h3 {
@@ -86,6 +82,12 @@ footer {
       text-align: center;
   }
 
+
+
+
+
+
+
 button,
 .button {
     border: none;  /*overwrites browser default and resets border*/
@@ -97,8 +99,7 @@ button,
     padding: 8px;
     border-radius: 2px;         /*These 2 add spacing to the button*/
     border-bottom: 3px solid rgba(0, 0, 0, 0.3);    /*Gives a bottom border with a width of 2px, a solid, and a color in RGBA format*/
-    transition-duration: 0.3s opacity;
-
+    transition-duration: 0.3s;
 
     max-width: 170px;
     display: flex;
@@ -123,12 +124,14 @@ button:focus,
 }
 
 
+
+
 a {
     color: var(--primary-color);
 }
 
 a:visited {
-    color: var(--purple);
+    color: var(--secondary-color);
 }
 
 a:hover, a:focus {
@@ -142,6 +145,11 @@ a:active {
 /*
 flex properties are in the order: flex-grow, flex-shrink, flex-basis
 */
+
+
+
+
+
 
 
 /*For home page*/
@@ -160,6 +168,8 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     height: auto;
 }
 
+
+
 /*For about page*/
 
 .about-content {
@@ -170,53 +180,49 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     text-align: center;
 }
 
-.sun {
-    animation: 4s color-change infinite alternate linear;
+
+
+
+/*For work page*/
+
+.work-content__item {
+    text-align: left;
+    margin-left: 20px;
 }
 
-.cloud-front {
-    animation: 30s cloud-move infinite alternate linear;
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 450px 450px;
+    grid-gap: 20px;
+    margin: 20px;
+    margin-right: 35px;
+    justify-content: center;
 }
 
-.cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
+.grid__item {
+    background-color: #dfe5d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes color-change {
-    0% {
-        fill: #edc655;
-    }
-    50% {
-        fill: #fcffad;
-    }
-    100% {
-        fill: #f76414;
-    }
+.grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
 }
 
-@keyframes cloud-move {
-    from {
-        transform: translate(0, 50px);
-    }
-    to {
-        transform: translate(200px, 50px);
-    }
-}
-
-@keyframes cloud-move-reverse {
-    from {
-        transform: translate(446, 48px);
-    }
-    to {
-        transform: translate(100px, 48px);
-    }
+.grid__image {
+    width: 100%;
 }
 
 
 
 /*For contact page*/
 
-.contact-content {
+.contact-content {      /*Now a legacy class*/
     max-width: 700px;
     margin: 0 auto;
     display: flex;
@@ -226,32 +232,26 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     flex: 1;
 }
 
-/*For work page*/
-
-.work-content__item {
+.contact-main {
+    margin: 50px;
+    margin-bottom: 100px;
     text-align: center;
 }
 
-.work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
-    justify-content: center;
+.contact-form {
+    margin: 5px auto;
+    width: 80%;
 }
 
-.grid__item {
-    background-color: lightgray;
-}
+.contact-form input {
+    width: 25%;
+    padding: 4px;
+  }
 
-.grid__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 4;
-}
+/*NOTE: Styling for the 'message' input field is in contact.html on the same line, with 'cols' and 'rows'*/
 
 
-
-/*Media queries*/
+/*Media queries. I think this is for responsiveness? Seems to be about making my work grid responsive, yeah*/
 
 @media all and (max-width: 500px) {
     .work-grid {
@@ -273,6 +273,9 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     }
     h1 {
         font-size: 22px;
+    }
+    h2 {
+        font-size: 19px;
     }
 }
 
