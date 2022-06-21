@@ -248,6 +248,19 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
     padding: 4px;
   }
 
+/*This designates ALL labels and inputs. Might need to change that. 
+For now this is Phillips recommended solution for spacing on the contact page*/
+
+label, input {
+    display: block;
+    margin: 0 auto;
+}
+
+label {
+    margin: 15px 0 5px;
+}
+
+
 /*NOTE: Styling for the 'message' input field is in contact.html on the same line, with 'cols' and 'rows'*/
 
 
