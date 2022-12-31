@@ -2,15 +2,17 @@
 
 /*VARIABLES*/
 
-:root{
+:root {
     --primary-color: #357b61;
     --secondary-color: #492f62;
-    --tertiary-color: #2b2b2b;      
-    --active-color: #6a9c1f;         /*Think this is for the active links? Will need to change those */
+    --tertiary-color: #2b2b2b;
+    --active-color: #6a9c1f;
+    /*Think this is for the active links? Will need to change those */
 }
 
 * {
-    box-sizing: border-box;             /*This is a universal selector of some sort, which is why it's at the top*/
+    box-sizing: border-box;
+    /*This is a universal selector of some sort, which is why it's at the top*/
 }
 
 
@@ -33,7 +35,8 @@
     padding: 20px;
 }
 
-.page-header__logo {                /*This used to be the DV Garen pic but thats gone. */
+.page-header__logo {
+    /*This used to be the DV Garen pic but thats gone. */
     width: 10%;
 }
 
@@ -59,28 +62,28 @@ body {
 h1 {
     font-size: 30px;
     font-weight: 700;
-  }
-  
+}
+
 h2 {
     font-size: 23px;
     font-weight: 400;
-  }
-  
+}
+
 h3 {
     font-size: 18px;
     font-weight: 700;
-  }
-  
+}
+
 footer {
-      font-size: 14px;
-  }
-  
+    font-size: 14px;
+}
+
 .page-footer {
-      clear: both;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-  }
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 
 
@@ -90,15 +93,20 @@ footer {
 
 button,
 .button {
-    border: none;  /*overwrites browser default and resets border*/
-    font-family: inherit;  /*takes font from outer container/parent element*/
-    display: inline-block; 
+    border: none;
+    /*overwrites browser default and resets border*/
+    font-family: inherit;
+    /*takes font from outer container/parent element*/
+    display: inline-block;
     background-color: var(--primary-color);
     color: white;
-    text-decoration: none;      /*These 3 style the background color, font color, and text decoration of the button*/
+    text-decoration: none;
+    /*These 3 style the background color, font color, and text decoration of the button*/
     padding: 8px;
-    border-radius: 2px;         /*These 2 add spacing to the button*/
-    border-bottom: 3px solid rgba(0, 0, 0, 0.3);    /*Gives a bottom border with a width of 2px, a solid, and a color in RGBA format*/
+    border-radius: 2px;
+    /*These 2 add spacing to the button*/
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    /*Gives a bottom border with a width of 2px, a solid, and a color in RGBA format*/
     transition-duration: 0.3s;
 
     max-width: 170px;
@@ -112,9 +120,10 @@ button,
 button:hover,
 button:focus,
 .button:hover,
-.button:focus {            /*iirc the button:focus is a thing for screen readers*/
+.button:focus {
+    /*iirc the button:focus is a thing for screen readers*/
     cursor: pointer;
-    opacity: 0.8;     
+    opacity: 0.8;
 
 }
 
@@ -134,8 +143,10 @@ a:visited {
     color: var(--secondary-color);
 }
 
-a:hover, a:focus {
-    text-decoration: none;      /*Makes the underline disappear whenever I hover over a link*/
+a:hover,
+a:focus {
+    text-decoration: none;
+    /*Makes the underline disappear whenever I hover over a link*/
 }
 
 a:active {
@@ -216,13 +227,15 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
 
 .grid__image {
     width: 100%;
+    height: 40%;
 }
 
 
 
 /*For contact page*/
 
-.contact-content {      /*Now a legacy class*/
+.contact-content {
+    /*Now a legacy class*/
     max-width: 700px;
     margin: 0 auto;
     display: flex;
@@ -246,7 +259,7 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
 .contact-form input {
     width: 25%;
     padding: 4px;
-  }
+}
 
 /*NOTE: Styling for the 'message' input field is in contact.html on the same line, with 'cols' and 'rows'*/
 
@@ -258,26 +271,28 @@ flex properties are in the order: flex-grow, flex-shrink, flex-basis
         grid-template-columns: 1fr;
     }
 }
+
 @media all and (min-width: 500px) and (max-width: 750px) {
     .work-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media all and (max-width: 750px) {
     .work-grid {
         grid-gap: 10px;
     }
+
     .grid__item:last-child {
         grid-column: auto/auto;
         grid-row: auto/auto;
     }
+
     h1 {
         font-size: 22px;
     }
+
     h2 {
         font-size: 19px;
     }
 }
-
-
-
